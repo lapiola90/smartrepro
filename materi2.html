@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sushain Gupta" />
+    <meta property="og:image" content="./assets/project.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <title>SMARTREPRO: Media Pembelajaran Virtual Interaktif</title>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="./scripts/firebaseInit.js"></script>
+  </head>
+  <body>
+    <!--Toaster-->
+    <div class="toaster"></div>
+    <!--Div for background-->
+    <div class="bg-div"></div>
+    <!-----------------------
+         HEADER
+         ------------------------->
+    <header class="header" id="header">
+      <div class="logo img">
+        <img
+          class=""
+          src="https://i.supa.codes/ifERYT"
+          alt="logo"
+        />
+      </div>
+      <p class="logo initials" tabindex="1" href=""></p>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              class="navbar-link active"
+              name="home"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="4"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="Materi"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="5"
+              >Materi</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="jenis"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="6"
+              >Jenis</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="belajar"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="7"
+              >Belajar</a
+            >
+          </li>
+    <!-----------------------
+         Materi wak
+         ------------------------->
+    <section class="section home-section" id="home" tabindex="42">
+      <div>
+        <h1>Kanker Serviks</h1>
+        <p class="aboutShort">
+          Pernahkah kamu mendengar penyakit kanker serviks? Kanker serviks adalah keadaan di mana sel-sel yang tidak normal tumbuh di seluruh lapisan epitel serviks. Nah, serviks ini merupakan bagian rahim yang terhubung ke vagina, atau bisa disebut juga sebagai leher rahim. Kanker serviks disebabkan oleh infeksi virus papiloma manusia (human papiloma virus).
+          Gejala kanker serviks lumayan sulit dideteksi, sehingga para penderita baru akan menyadari saat sudah masuk ke stadium akhir. Kanker ini biasanya diderita oleh wanita usia 30-45 tahun. Penanganannya bisa dilakukan dengan mengangkat uterus, oviduk, ovarium, sepertiga bagian atas vagina, dan kelenjar limpa panggul.
+        </p>
+      </div>
+      <div class="">
+        <div class="imgDiv">
+          <img src="./KANKER.png" class="profile-image" />
+        </div>
+      </div>
+    </section>
+

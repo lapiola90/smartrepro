@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sushain Gupta" />
+    <meta property="og:image" content="./assets/project.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <title>SMARTREPRO: Media Pembelajaran Virtual Interaktif</title>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="./scripts/firebaseInit.js"></script>
+  </head>
+  <body>
+    <!--Toaster-->
+    <div class="toaster"></div>
+    <!--Div for background-->
+    <div class="bg-div"></div>
+    <!-----------------------
+         HEADER
+         ------------------------->
+    <header class="header" id="header">
+      <div class="logo img">
+        <img
+          class=""
+          src="https://i.supa.codes/ifERYT"
+          alt="logo"
+        />
+      </div>
+      <p class="logo initials" tabindex="1" href=""></p>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              class="navbar-link active"
+              name="home"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="4"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="Materi"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="5"
+              >Materi</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="jenis"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="6"
+              >Jenis</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="belajar"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="7"
+              >Belajar</a
+            >
+          </li>
+    <!-----------------------
+         Materi wak
+         ------------------------->
+    <section class="section home-section" id="home" tabindex="42">
+      <div>
+        <h1>Apa Itu</h1><span class="name">HIV/AIDS</span></h1>
+        <p class="aboutShort">
+     HIV atau human immunodeficiency virus adalah penyakit yang 
+     menyerang CD4, yaitu salah satu bagian dari sistem imun manusia.
+     Sistem imun yang lemah akibat HIV akan membuat pengidapnya lebih mudah 
+     terkena infeksi oportunistis atau infeksi sekunder. Inilah yang menyebabkan
+     gejala yang ditunjukkan oleh pasien HIV sangat bervariasi.
+     Sementara itu, AIDS berbeda dengan HIV. AIDS atau acquired immunodeficiency 
+     syndrome adalah kondisi yang bisa menyerang pasien HIV dengan CD4 berada di bwah 200 dan 
+     menimbulkan kumpulan gejala yang dapat mengganggu kualitas hidup. AIDS umumnya muncul ketika 
+     stadium infeksi HIV sudah mencapai tahap yang sangat parah. pasien HIV tidak selalu terkena 
+     AIDS. Apabila dideteksi sejak awal dan melakukan perawatan serta menjaga pola hidup, pasien HIV juga 
+     bisa hidup normal dan tercegah dari AIDS.
+
+        </p>
+      </div>
+      <div class="">
+        <div class="imgDiv">
+          <img src="./mtri1.jpg" class="profile-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h1>Gejala</h1><span class="name">HIV/AIDS</span></h1>
+            <p class="aboutShort">
+              Walaupun sangat bervariasi, secara umum ada beberapa gejala yang
+              timbul pada pengidap HIV/AIDS. Beberapa contoh gejalanya antara lain berat badan 
+              turun, influenza, demam, diare, hingga penyakit yang lebih parah seperti meningitis
+              dan tuberkolosis. Lihat gambar di bawah ini untuk lebih lengkapnya.
+    
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>
+
+         <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h1>FAKTA</h1><span class="name">HIV/AIDS</span></h1>
+            <p class="aboutShort">
+              1. Negara dengan pengidap AIDS terbanyak di dunia adalah Afrika Selatan
+              Ternyata negara dengan pengidap AIDS terbanyak di dunia adalah Afrika Selatan.
+              Di Afrika Selatan, 20% penduduk dewasanya merupakan pengidap AIDS dan sekitar 2,7
+              juta pengidap AIDS tersebut sedang mengalami pengobatan. Selain itu, di Afrika Selatan, 
+              HIV/AIDS sering dianggap sebagai penyakit yang sangat berbahaya, sehingga pengidapnya bisa 
+              dijatuhi hukuman mati Banyak sekali ODHA (orang dengan HIV AIDS) di negara tersebut yang tidak 
+              mau mengakui di hadapan publik bahwa mereka terserang penyakit tersebut.
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV2.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>
+         <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h3>2. Pengobatan Antiretroviral untuk pengidap HIV/AIDS</h3>
+            <p class="aboutShort">
+              Pengobatan Antiretroviral dapat membantu penderita HIV/AIDS 
+              (Sumber: hiv.autoimuncare.com) Tahukah kamu, sekarang sudah ada obat
+               yang bisa membantu pengidap HIV/AIDS. Pengobatan tersebut disebut dengan
+                Pengobatan Antiretroviral. Menurut Permenkes no. 87 tahun 2014, Pengobatan
+                 antiretroviral merupakan bagian dari pengobatan HIV dan AIDS untuk mengurangi
+                  risiko penularan HIV, menghambat perburukan infeksi oportunistik, meningkatkan
+                   kualitas hidup penderita HIV, dan menurunkan jumlah virus (viral load) dalam 
+                   darah sampai tidak terdeteksi. Dengan melambatnya pertumbuhan virus, maka otomatis 
+                   perkembangan penyakit HIV/AIDS tersebut juga bisa diilambatkan.
+              Pada tahun 2015 lalu, sebanyak 15 juta orang sudah melakukan Pengobatan 
+              Antiretroviral ini, lho. Meskipun belum bisa menyembuhkan penyakit HIV/AIDS secara
+               seutuhnya, tetapi pengobatan ini sudah cukup membantu. Semoga pengobatannya akan terus 
+               berkembang ya!
+
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV3.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>
+
+         <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h3>3. Dengan Tes HIV, lakukan deteksi dini terhadap virus HIV/AIDS</h3>
+            <p class="aboutShort">
+              Banyak sekali penderita HIV yang terlambat mengetahui bahwa ia terserang 
+              penyakit ini. Sekarang, setiap orang bisa melakukan deteksi dini terhadap 
+              tubuh untuk mengetahui apakah ia terserang virus HIV/AIDS. Mayoritas dari tes 
+              ini melacak antibodi tubuh kita terhadap virus HIV/AIDS. Tahapan tes HIV antara lain 
+              tes darah dan tes air seni. Sekarang, jenis tes HIV yang paling sering digunakan disebut 
+              juga tes cepat atau rapid test, yang memungkinkan peserta test untuk mendapatkan hasil dalam 
+              waktu 2 jam. Wow, cepat juga, ya!
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV4.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>
+
+         <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h3>4. HIV/AIDS adalah masalah kesehatan dunia</h3>
+            <p class="aboutShort">
+              HIV/AIDS telah ditetapkan sebagai masalah kesehatan publik di seluruh dunia. 
+              Seperti yang dilansir dari WHO, pada akhir tahun 2020 saja diperkirakan ada lebih 
+              dari 37,7 juta orang di seluruh dunia yang hidup dengan HIV. Namun, lebih dari dua per 
+              tiganya berasal dari Afrika. Bahkan, tingkat kematian akibat HIV/AIDS pun cukup tinggi, 
+              lho. Di tahun 2020, tercatat ada sekitar 680.000 orang yang meninggal dunia akibat HIV. Sementara 
+              itu, kasus baru HIV di tahun 2020 diperkirakan mencapai 1,5 juta jiwa.
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>
+        <!-----------------------
+         Materi wak
+         ------------------------->
+         <section class="section home-section" id="home" tabindex="42">
+          <div>
+            <h3>5. HIV dapat dicegah</h3>
+            <p class="aboutShort">
+              HIV tentu saja dapat dicegah. Berikut adalah beberapa langkah pencegahan penularan HIV
+               yang direkomendasikan oleh WHO.
+             ●	Tidak berganti-ganti pasangan
+             ●	Menggunakan pengaman saat berhubungan seksual
+             ●	Melakukan tes HIV dan penyakit menular seksual lainnya
+             ●	Tidak menggunakan jarum suntik bekas
+             ●	Mencegah transmisi HIV dari ibu ke anak
+             ●	Melakukan sunat atau sikumsisi
+            </p>
+          </div>
+          <div class="">
+            <div class="imgDiv">
+              <img src="./HIV.jpg" class="profile-image" />
+            </div>
+          </div>
+        </section>

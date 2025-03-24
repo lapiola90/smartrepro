@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sushain Gupta" />
+    <meta property="og:image" content="./assets/project.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <title>SMARTREPRO: Media Pembelajaran Virtual Interaktif</title>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="./scripts/firebaseInit.js"></script>
+  </head>
+  <body>
+    <!--Loader-->
+    <div class="loaderDiv">
+      <div class="loader"></div>
+      <p>Loading page</p>
+    </div>
+    <!--Toaster-->
+    <div class="toaster"></div>
+    <!--Div for background-->
+    <div class="bg-div"></div>
+    <!-----------------------
+         HEADER
+         ------------------------->
+    <header class="header" id="header">
+      <div class="logo img">
+        <img
+          class=""
+          src="https://i.supa.codes/ifERYT"
+          alt="logo"
+        />
+      </div>
+      <p class="logo initials" tabindex="1" href=""></p>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              class="navbar-link active"
+              name="home"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="4"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="Materi"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="5"
+              >Materi</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="jenis"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="6"
+              >Jenis</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="belajar"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="7"
+              >Belajar</a
+            >
+          </li>
+        <a
+          class="contactBtn button"
+          name="getInTouch"
+          tabindex="10"
+          href="https://wa.me/6289608688766"
+          target="_blank"
+          >Contact</a
+        >
+        <ion-icon
+          tabindex="9"
+          name="close-outline"
+          class="mobile-nav-icon"
+          onclick="toggleNav()"
+        ></ion-icon>
+      </div>
+      <ion-icon
+        tabindex="3"
+        name="menu-outline"
+        class="mobile-nav-icon"
+        onclick="toggleNav()"
+      ></ion-icon>
+    </header>
+    <!-----------------------
+         HOME SECTION
+         ------------------------->
+    <section class="section home-section" id="home" tabindex="42">
+      <div>
+        <h1>Hey, <span class="name">Student</span></h1>
+        <p class="aboutShort">
+          Smartmin akan membantu kalian dalam mempelajari apa saja macam
+          penyakit yang bisa terjadi di reproduksi manusia!!
+        </p>
+      </div>
+      <div class="">
+        <div class="imgDiv">
+          <img src="./depan.jpg" class="profile-image" />
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         ABOUT SECTION
+         ------------------------->
+    <section id="Materi" class="section about-section" tabindex="11">
+      <div class="about-ill"><img src="./materi1.jpg" alt="Memoji" /></div>
+      <div
+        class="aboutMe"
+        data-aos="fade-left"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h2 class="name">Penyakit Reproduksi Manusia</h2>
+        <br />
+        <p class="aboutLong">
+          Penyakit reproduksi adalah gangguan atau infeksi yang menyerang organ
+          reproduksi, baik pada pria maupun wanita. Penyakit ini bisa disebabkan oleh 
+          bakteri, virus, jamur, atau faktor lain seperti ketidakseimbangan hormon dan 
+          q kelainan genetik.
+        </p>
+        <br />
+        <a
+          class="button"
+          href=""
+          target="_blank"
+          tabindex="12"
+        >
+          <ion-icon name="document-outline"></ion-icon>
+        </a>
+      </div>
+      
+    </section>
+    <!-----------------------
+         SKILLS SECTION
+         ------------------------->
+    <section class="section skill-section" id="jenis" tabindex="17">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          Jenis-Jenis Penyakit Reproduksi.
+        </h1>
+        <div class="skill-container">
+          <div class="major">
+            <img src="./sakit1.jpg" alt="Skill image 1" />
+            <p>PCOS</p>
+          </div>
+          <div class="minor">
+            <img src="./sakit2.jpg" alt="Skill image 2" />
+            <p>HIV AIDS</p>
+          </div>
+          <div class="minor">
+            <img src="./sakit3.jpg" alt="Skill image 3" />
+            <p>Kanker Serviks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------
+         PROJECT SECTION
+         ------------------------->
+    <section class="section main project-section" id="belajar" tabindex="18">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <div class="section-header">
+          <h1 class="title">
+            Ayok Belajar!!!
+          </h1>
+          <img
+            class="ProjectHeaderImage"
+            src="./assets/project-head.png"
+            alt="Project header image"
+          />
+        </div>
+        <div class="project card-container">
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./sakit1.jpg" alt="Project image" />
+            </div>
+            <br />
+            <h6>PCOS</h6>
+            <p class="techstack">
+              <span> Materi </span> 
+            </p>
+            <div class="options">
+              <a
+                class="viewElem"
+                href="./materi3.html"
+                target="_blank"
+              >
+                <ion-icon name="open-outline"></ion-icon>
+              </a>
+              <a class="githubElem" href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./sakit2.jpg" alt="Project image" />
+            </div>
+            <br />
+            <h6>HIV AIDS</h6>
+            <p class="techstack">
+              <span> Materi </span>
+            </p>
+            <div class="options">
+              <a
+                class="viewElem"
+                href="./materi1.html"
+                target="_blank"
+              >
+                <ion-icon name="open-outline"></ion-icon>
+              </a>
+              <a class="githubElem" href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="./sakit3.jpg" alt="Project image" />
+            </div>
+            <br />
+            <h6></h6>
+            <p class="techstack">
+              <span> Kanker Serviks </span>
+            </p>
+            <div class="options">
+              <a
+                class="viewElem"
+                href="./materi2.html"
+                target="_blank"
+              >
+                <ion-icon name="open-outline"></ion-icon>
+              </a>
+              <a class="githubElem" href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-------------------------
+         PROJECT SECTION2
+         ------------------------->
+         <section class="section main project-section" id="belajar" tabindex="18">
+          <div
+            style="
+              width: 100%;
+              align-items: center;
+              display: flex;
+              flex-direction: column;
+            "
+            data-aos="zoom-in-up"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <div class="section-header">
+              <h1 class="title">
+                MODUL PEMBELAJARAN
+              </h1>
+              <img
+                class="ProjectHeaderImage"
+                src="./assets/project-head.png"
+                alt="Project header image"
+              />
+            </div>
+            <div class="project card-container">
+              <div class="project card 1" tabindex="">
+                <div class="imgDiv">
+                  <img src="./sakit2.jpg" alt="Project image" />
+                </div>
+                <br />
+                <h6></h6>
+                <p class="techstack">
+                  <span> MATERI PDF </span> 
+                </p>
+                <div class="options">
+                  <a
+                    class="viewElem"
+                    href="./pdf1.pdf"
+                    target="_blank"
+                  >
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                  <a class="githubElem" href="https://github.com" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="share">
+                    <ion-icon name="link-outline">Copied text!</ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="project card 1" tabindex="">
+                <div class="imgDiv">
+                  <img src="./sakit1.jpg" alt="Project image" />
+                </div>
+                <br />
+                <h6></h6>
+                <p class="techstack">
+                  <span> MATERI PDF </span> 
+                </p>
+                <div class="options">
+                  <a
+                    class="viewElem"
+                    href="./pdf2.pdf"
+                    target="_blank"
+                  >
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                  <a class="githubElem" href="https://github.com" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="share">
+                    <ion-icon name="link-outline">Copied text!</ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="project card 1" tabindex="">
+                <div class="imgDiv">
+                  <img src="./sakit3.jpg" alt="Project image" />
+                </div>
+                <br />
+                <h6></h6>
+                <p class="techstack">
+                  <span> MATERI PDF </span> 
+                </p>
+                <div class="options">
+                  <a
+                    class="viewElem"
+                    href="./pdf3.pdf"
+                    target="_blank"
+                  >
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                  <a class="githubElem" href="https://github.com" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <button class="share">
+                    <ion-icon name="link-outline">Copied text!</ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-----------------------
+         CONTACT FORM
+         ------------------------->
+    <div class="formDiv">
+      <img alt="contact illustration" src="./assets/contact.png" />
+      <form id="myform">
+        <div class="user-box">
+          <input type="text" id="name" required /><label for="Name"
+            >Your Name</label
+          >
+        </div>
+        <div class="user-box">
+          <input type="email" id="email" required /><label for="Email"
+            >Email Address</label
+          >
+        </div>
+        <div class="user-box">
+          <textarea id="message" required></textarea
+          ><label for="Message">Enter your message</label>
+        </div>
+        <button type="submit" class="submit-btn button">Submit</button>
+      </form>
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+    <!-----------------------
+         FOOTER SECTION
+         ------------------------->
+    <footer class="footer" tabindex="35">
+      <div class="getInTouch">
+        <h3>Start a project?</h3>
+        <p>
+          Interested in working together? We should queue up a time to chat.
+        </p>
+        <a
+          class="getInTouchBtn button"
+          target="_blank"
+          href="https://www.gmail.com"
+          tabindex="36"
+          >Get in touch</a
+        >
+      </div>
+      <div class="footerParent">
+        <div class="profInfo">
+          <div class="imgDiv">
+            <img src="./assets//project.png" alt="Profile Image" />
+          </div>
+          <p>
+          </p>
+        </div>
+        <div class="reachMeOut">
+          <h3>Reach me out on</h3>
+          <ul class="social-menu">
+            <li id="linkedin">
+              <a
+                href="https://www.linkedin.com"
+                class="linkedin"
+                tabindex="38"
+                aria-label="linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li id="github">
+              <a
+                href="https://github.com"
+                aria-label="github"
+                class="github"
+                tabindex="39"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li id="instagram">
+              <a
+                href="https://www.instagram.com"
+                aria-label="instagram"
+                class="instagram"
+                tabindex="40"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li id="twitter">
+              <a
+                href="https://twitter.com"
+                aria-label="twitter"
+                class="twitter"
+                tabindex="41"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="developerInfo">
+        © SMARETPRO - UM 
+      </p>
+    </footer>
+    <!-- Scripts -->
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/commonScript.js"></script>
+    <script src="./scripts/script.js"></script>
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
